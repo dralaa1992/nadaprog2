@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>المحتوى التعليمي</title>
+  <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* الناف الرئيسي */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #2c3e50;
+      padding: 12px 25px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+    .nav-links a:hover { color: #f1c40f; }
+
+    .left-text {
+      font-weight: bold;
+      font-size: 14px;
+      color: #f1c40f;
+    }
+
+    /* الناف الثانوي */
+    .sub-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #34495e;
+      padding: 10px;
+      gap: 15px;
+    }
+    .sub-nav a {
+      background: #ecf0f1;
+      padding: 8px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.3s;
+    }
+    .sub-nav a:hover {
+      background: #f39c12;
+      color: white;
+      transform: scale(1.05);
+    }
+
+*{
+    box-sizing: border-box; /* مهم جدا لتساوي المسافات */
+}
+/* شبكة الكروت */
+
+    /* فوتر ثابت */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    footer:hover { background: #34495e; text-shadow: 0 0 8px #f39c12; }
+
+.modules {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    width: 90%;
+    margin: auto;
+}
+
+.module-card {
+    position: relative;
+    background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+    border-radius: 18px;
+    padding: 25px 15px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.3), 0 0 30px rgba(0, 150, 255, 0.2);
+}
+
+.module-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6), 0 0 50px rgba(0, 180, 255, 0.4);
+}
+
+.module-img {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    background: rgb(243, 244, 238);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: #00eaff;
+    box-shadow: 0 0 15px rgba(0,234,255,0.6);
+    margin-bottom: 15px;
+}
+
+.module-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.lock {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 22px;
+    color: #ff4d4d;
+}
+
+.module-card.unlocked .lock {
+    display: none;
+}
+.module-card .module-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+.modules {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    width: 90%;
+    margin: auto;
+}
+
+.module-card {
+    position: relative;
+    background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+    border-radius: 18px;
+    padding: 25px 15px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.3), 0 0 30px rgba(0, 150, 255, 0.2);
+}
+
+.module-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6), 0 0 50px rgba(0, 180, 255, 0.4);
+}
+
+.module-img {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+    background: #fff;
+    overflow: hidden; /* يضمن عدم خروج الصورة خارج الدائرة */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.module-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* الصورة تغطي الدائرة بالكامل بدون تشويه */
+}
+
+.module-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.lock {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 22px;
+    color: #ff4d4d;
+}
+
+.module-card.unlocked .lock {
+    display: none;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- الناف الرئيسي -->
+  <nav>
+    <div class="nav-links">
+      <a href="index.html">🏠 الصفحة الرئيسية</a>
+      <a href="course.html">📚 المحتوى التعليمي</a>
+      <a href="supervisor.html">🔍 الإعداد والإشراف </a>
+      <a href="instruction.html">📜 التعليمات </a>
+      <a href="contact.html">✉️ التواصل</a>
+    </div>
+    <div class="left-text">نمط الاسئلة الضمنية المصورة المكثفة   </div>
+  </nav>
+  <!-- الناف الثانوي -->
+<div class="modules">
+
+    <div class="module-card locked" data-pass="1111" data-link="mod1.html">
+        <div class="module-img">
+            <img src="img/m1.jpg" alt="صورة الموديول" />
+        </div>
+        <div class="module-title">الموديول الأول</div>
+        <div class="lock"><i class="fa-solid fa-lock"></i></div>
+    </div>
+
+    <div class="module-card locked" data-pass="2222" data-link="mod2.html">
+        <div class="module-img">
+            <img src="img/m2.jpg" alt="صورة الموديول" />
+        </div>
+        <div class="module-title">الموديول الثاني</div>
+        <div class="lock"><i class="fa-solid fa-lock"></i></div>
+    </div>
+
+    <div class="module-card locked" data-pass="3333" data-link="module3.html">
+        <div class="module-img">
+            <img src="img/m3.jpg" alt="صورة الموديول" />
+        </div>
+        <div class="module-title">الموديول الثالث</div>
+        <div class="lock"><i class="fa-solid fa-lock"></i></div>
+    </div>
+
+    <div class="module-card locked" data-pass="4444" data-link="module4.html">
+        <div class="module-img">
+            <img src="img/m4.png" alt="صورة الموديول" />
+        </div>
+        <div class="module-title">الموديول الرابع</div>
+        <div class="lock"><i class="fa-solid fa-lock"></i></div>
+    </div>
+
+</div>
+
+
+
+
+  <!-- النشاط -->
+  
+  <!-- فوتر -->
+  <footer>
+            ©  All rights reserved by D. Dawood
+        
+   </footer>
+<script>
+document.querySelectorAll('.module-card').forEach(card => {
+    card.addEventListener('click', function () {
+
+        if (!this.classList.contains('locked')) return;
+
+        let correctPass = this.dataset.pass;
+        let link = this.dataset.link;
+
+        let userPass = prompt("🔐 أدخل كلمة المرور لفتح الموديول:");
+
+        if (userPass === correctPass) {
+            this.classList.remove('locked');
+            this.classList.add('unlocked');
+            window.location.href = link;
+        } else {
+            alert("❌ كلمة المرور غير صحيحة");
+        }
+    });
+});
+</script>
+
+
+</body>
+</html>

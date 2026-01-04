@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>المحتوى التعليمي</title>
+  <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+     body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* الناف الرئيسي */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #2c3e50;
+      padding: 12px 25px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+    .nav-links a:hover { color: #f1c40f; }
+
+    .left-text {
+      font-weight: bold;
+      font-size: 14px;
+      color: #f1c40f;
+    }
+
+    /* الناف الثانوي */
+    .sub-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #34495e;
+      padding: 10px;
+      gap: 15px;
+    }
+    .sub-nav a {
+      background: #ecf0f1;
+      padding: 8px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.3s;
+    }
+    .sub-nav a:hover {
+      background: #f39c12;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* فوتر ثابت */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    footer:hover { background: #34495e; text-shadow: 0 0 8px #f39c12; }
+
+.objectives-wrapper {
+    max-width: 1300px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* عنوان */
+.objectives-title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #0d3b66;
+    text-shadow: 0 0 10px rgba(0,123,255,0.45);
+}
+
+/* الكارت الخارجي */
+.objectives-card {
+    background: linear-gradient(145deg, #eaf2ff, #d2e2ff);
+    border-radius: 28px;
+    padding: 20px;
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.3),
+        0 0 35px rgba(0,123,255,0.6);
+    transition: 0.4s ease;
+}
+
+/* توهج عند المرور */
+.objectives-card:hover {
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.35),
+        0 0 45px rgba(0,123,255,0.9);
+}
+
+/* منطقة السكرول */
+.objectives-scroll {
+    max-height: 420px;       /* ارتفاع الكارت */
+    overflow-y: auto;
+    padding: 15px;
+    border-radius: 22px;
+    background: #ffffff;
+}
+
+/* تخصيص شكل السكرول */
+.objectives-scroll::-webkit-scrollbar {
+    width: 10px;
+}
+.objectives-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(#0d3b66, #1d4e89);
+    border-radius: 10px;
+}
+.objectives-scroll::-webkit-scrollbar-track {
+    background: #eef3ff;
+    border-radius: 10px;
+}
+
+/* الصورة */
+.objectives-img {
+    width: 100%;
+    display: block;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- الناف الرئيسي -->
+  <nav>
+    <div class="nav-links">
+      <a href="index.html">🏠 الصفحة الرئيسية</a>
+      <a href="course.html">📚 المحتوى التعليمي</a>
+      <a href="supervisor.html">🔍 الإعداد والإشراف </a>
+      <a href="instruction.html">📜 التعليمات </a>
+      <a href="contact.html">✉️ التواصل</a>
+    </div>
+    <div class="left-text">نمط الاسئلة الضمنية المصورة المكثفة   </div>
+  </nav>
+<div class="sub-nav">
+    <a href="mod1.html">📘 عنوان الموديول</a>
+    <a href="mod1jus7.html">💡 مبررات دراسة الموديول</a>
+    <a href="#">🎯 أهداف الموديول</a>
+    <a href="mod1prettest.html">📝 الاختبار القبلي</a>
+    <a href="#">📖 محتوى الموديول</a>
+    <a href="#">🛠️ النشاط التعليمي للموديول</a>
+    <a href="#">✅ التقويم الذاتي للموديول</a>
+    <a href="#">📊 الاختبار البعدي</a>
+  </div>
+
+<section class="objectives-wrapper">
+    <h2 class="objectives-title">أهداف الموديول</h2>
+
+    <div class="objectives-card">
+        <div class="objectives-scroll">
+            <img src="img/aim1.png" alt="أهداف الموديول" class="objectives-img">
+        </div>
+    </div>
+</section>
+
+
+
+  <!-- النشاط -->
+  
+  <!-- فوتر -->
+  <footer>
+            ©  All rights reserved by D. Dawood
+        
+   </footer>
+
+  <script>
+    
+  </script>
+</body>
+</html>

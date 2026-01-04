@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>المحتوى التعليمي</title>
+  <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+     body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* الناف الرئيسي */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #2c3e50;
+      padding: 12px 25px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+    .nav-links a:hover { color: #f1c40f; }
+
+    .left-text {
+      font-weight: bold;
+      font-size: 14px;
+      color: #f1c40f;
+    }
+
+    /* الناف الثانوي */
+    .sub-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #34495e;
+      padding: 10px;
+      gap: 15px;
+    }
+    .sub-nav a {
+      background: #ecf0f1;
+      padding: 8px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.3s;
+    }
+    .sub-nav a:hover {
+      background: #f39c12;
+      color: white;
+      transform: scale(1.05);
+    }
+.tf-card {
+    max-width: 900px;
+    margin: 60px auto;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    border-top: 8px solid #2a5298;
+}
+
+.tf-title {
+    text-align: center;
+    font-size: 26px;
+    color: #1e3c72;
+    margin-bottom: 30px;
+}
+
+.question {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.question label {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.correct {
+    border: 2px solid #28a745;
+    background: #e9f7ef;
+}
+
+.wrong {
+    border: 2px solid #dc3545;
+    background: #fdecea;
+}
+
+.submit-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 35px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    cursor: pointer;
+}
+
+.result-box {
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    font-size: 20px;
+    display: none;
+}
+
+    /* فوتر ثابت */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    footer:hover { background: #34495e; text-shadow: 0 0 8px #f39c12; }
+  </style>
+</head>
+<body>
+
+  <!-- الناف الرئيسي -->
+  <nav>
+    <div class="nav-links">
+      <a href="index.html">🏠 الصفحة الرئيسية</a>
+      <a href="course.html">📚 المحتوى التعليمي</a>
+      <a href="supervisor.html">🔍 الإعداد والإشراف </a>
+      <a href="instruction.html">📜 التعليمات </a>
+      <a href="contact.html">✉️ التواصل</a>
+    </div>
+    <div class="left-text">نمط الاسئلة الضمنية المصورة المكثفة   </div>
+  </nav>
+<div class="sub-nav">
+    <a href="mod1.html">📘 عنوان الموديول</a>
+    <a href="mod1jus7.html">💡 مبررات دراسة الموديول</a>
+    <a href="mod1aim.html">🎯 أهداف الموديول</a>
+    <a href="#">📝 الاختبار القبلي</a>
+    <a href="mod1content.html">📖 محتوى الموديول</a>
+    <a href="#">🛠️ النشاط التعليمي للموديول</a>
+    <a href="mod1selftest.html">✅ التقويم الذاتي للموديول</a>
+    <a href="#">📊 الاختبار البعدي</a>
+  </div>
+
+
+  <!-- النشاط -->
+  <div class="tf-card">
+    <h3 class="tf-title">نشاط (صواب / خطأ)</h3>
+
+    <form id="tfQuiz">
+
+        <div class="question">
+            <p>1️⃣ تُعد مصادر التعلم السمعية الرقمية محتوى صوتيًا يتم إنتاجه وتداوله باستخدام التقنيات الرقمية.</p>
+            <label><input type="radio" name="q1" value="true"> صواب</label>
+            <label><input type="radio" name="q1" value="false"> خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>2️⃣ استخدام تسجيلات صوتية تعليمية دون هدف تعليمي واضح يُعد مثالًا موجبًا لمصادر التعلم السمعية الرقمية.</p>
+            <label><input type="radio" name="q2" value="true"> صواب</label>
+            <label><input type="radio" name="q2" value="false"> خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>3️⃣ وسائل التعلم السمعية هي الأدوات التي تُستخدم لنقل المحتوى التعليمي اعتمادًا على حاسة السمع.</p>
+            <label><input type="radio" name="q3" value="true"> صواب</label>
+            <label><input type="radio" name="q3" value="false"> خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>4️⃣ الإذاعة التعليمية لا يمكن توظيفها في البيئات التعليمية الرقمية الحديثة.</p>
+            <label><input type="radio" name="q4" value="true"> صواب</label>
+            <label><input type="radio" name="q4" value="false"> خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>5️⃣ يُعد بث برامج إذاعية تعليمية موجهة للمتعلمين مثالًا موجبًا على توظيف الإذاعة في التعليم.</p>
+            <label><input type="radio" name="q5" value="true"> صواب</label>
+            <label><input type="radio" name="q5" value="false"> خطأ</label>
+        </div>
+
+        <button type="button" class="submit-btn" onclick="checkAnswers()">إظهار النتيجة</button>
+    </form>
+
+    <!-- مربع النتيجة -->
+    <div id="resultBox" class="result-box"></div>
+    
+</div>
+
+  <!-- فوتر -->
+  <footer>
+            ©  All rights reserved by D. Dawood
+        
+   </footer>
+<script>
+function checkAnswers() {
+
+    const answers = {
+        q1: "true",
+        q2: "false",
+        q3: "true",
+        q4: "false",
+        q5: "true"
+    };
+
+    let score = 0;
+    let total = Object.keys(answers).length;
+
+    for (let q in answers) {
+        let options = document.getElementsByName(q);
+        options.forEach(opt => opt.disabled = true);
+
+        let selected = [...options].find(o => o.checked);
+        let parent = options[0].closest(".question");
+
+        if (selected && selected.value === answers[q]) {
+            score++;
+            parent.classList.add("correct");
+        } else {
+            parent.classList.add("wrong");
+        }
+    }
+
+    let resultBox = document.getElementById("resultBox");
+    resultBox.style.display = "block";
+
+    if (score >= total * 0.8) {
+        resultBox.style.background = "#e9f7ef";
+        resultBox.style.border = "2px solid #28a745";
+        resultBox.innerHTML = `🌟 أحسنت! حصلت على ${score} من ${total} درجات`;
+    } else {
+        resultBox.style.background = "#fdecea";
+        resultBox.style.border = "2px solid #dc3545";
+        resultBox.innerHTML = `💡 حاول مرة أخرى، حصلت على ${score} من ${total} درجات`;
+    }
+}
+</script>
+
+  <script>
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>المحتوى التعليمي</title>
+  <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+     body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* الناف الرئيسي */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #2c3e50;
+      padding: 12px 25px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+    .nav-links a:hover { color: #f1c40f; }
+
+    .left-text {
+      font-weight: bold;
+      font-size: 14px;
+      color: #f1c40f;
+    }
+
+    /* الناف الثانوي */
+    .sub-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #34495e;
+      padding: 10px;
+      gap: 15px;
+    }
+    .sub-nav a {
+      background: #ecf0f1;
+      padding: 8px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.3s;
+    }
+    .sub-nav a:hover {
+      background: #f39c12;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* فوتر ثابت */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    footer:hover { background: #34495e; text-shadow: 0 0 8px #f39c12; }
+    .cover-page {
+    width: 80%;
+    margin: auto;
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+/* كارت التعليمات */
+.instructions-section {
+    margin-top: 30px;
+}
+
+.instructions-card {
+    background: linear-gradient(180deg, #ffffff, #f1f7fb);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* عنصر تعليمة */
+.instruction-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    background: #f5f9fc;
+    transition: 0.35s;
+}
+
+.instruction-item:last-child {
+    margin-bottom: 0;
+}
+
+.instruction-item i {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-top: 4px;
+}
+
+/* حركة عند المرور */
+.instruction-item:hover {
+    background: linear-gradient(135deg, #2c3e50, #2c3e50);
+    color: #ffffff;
+    transform: translateX(-6px);
+}
+
+.instruction-item:hover i {
+    color: #ffe082;
+}
+
+.instruction-item p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.9;
+}
+.instructions-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- الناف الرئيسي -->
+ <nav>
+    <div class="nav-links">
+      <a href="index.html">🏠 الصفحة الرئيسية</a>
+      <a href="course.html">📚 المحتوى التعليمي</a>
+      <a href="supervisor.html">🔍 الإعداد والإشراف </a>
+      <a href="instruction.html">📜 التعليمات </a>
+      <a href="contact.html">✉️ التواصل</a>
+    </div>
+    <div class="left-text">نمط الاسئلة الضمنية المصورة المكثفة   </div>
+  </nav>
+<div class="sub-nav">
+    <a href="mod1.html">📘 عنوان الموديول</a>
+    <a href="mod1jus7.html">💡 مبررات دراسة الموديول</a>
+    <a href="#">🎯 أهداف الموديول</a>
+    <a href="mod1prettest.html">📝 الاختبار القبلي</a>
+    <a href="#">📖 محتوى الموديول</a>
+    <a href="#">🛠️ النشاط التعليمي للموديول</a>
+    <a href="#">✅ التقويم الذاتي للموديول</a>
+    <a href="#">📊 الاختبار البعدي</a>
+  </div>
+
+<div class="section instructions-section">
+
+  <div class="instructions-title">
+    تعليمات بيئة التعلم المصغر
+</div>
+
+  <div class="instructions-card">
+
+    <div class="instruction-item">
+      <i class="fa-solid fa-play"></i>
+      <p><strong>1.</strong> ابدأ بدراسة كل موديول على حدة وفق التسلسل المحدد، ولا تنتقل إلى الموديول التالي إلا بعد الانتهاء من الموديول الحالي.</p>
+    </div>
+
+    <div class="instruction-item">
+      <i class="fa-solid fa-video"></i>
+      <p><strong>2.</strong> تعتمد بيئة التعلم المصغر على مقاطع فيديو تفاعلية إشارية قصيرة، لذا يُرجى التركيز في مشاهدة الفيديو كاملًا قبل الانتقال للسؤال.</p>
+    </div>
+
+    <div class="instruction-item">
+      <i class="fa-solid fa-hand-pointer"></i>
+      <p><strong>3.</strong> تظهر الأسئلة الضمنية المصورة أثناء عرض الفيديو، ويجب التفاعل معها في التوقيت المحدد لضمان الاستفادة الكاملة.</p>
+    </div>
+
+    <div class="instruction-item">
+      <i class="fa-solid fa-brain"></i>
+      <p><strong>4.</strong> حاول التفكير جيدًا قبل اختيار الإجابة، حيث تهدف الأسئلة إلى تنمية مفاهيم التعلم الرقمي والتفكير البصري.</p>
+    </div>
+
+    <div class="instruction-item">
+      <i class="fa-solid fa-rotate-right"></i>
+      <p><strong>5.</strong> في حال عدم تحقيق درجة الإتقان المطلوبة، يمكنك إعادة دراسة الموديول مرة أخرى لتحسين مستوى الأداء.</p>
+    </div>
+
+    <div class="instruction-item">
+      <i class="fa-solid fa-universal-access"></i>
+      <p><strong>6.</strong> روعي في تصميم البيئة استخدام لغة بصرية واضحة، ومقاطع فيديو إشارية مناسبة للطلاب المعاقين سمعيًا.</p>
+    </div>
+
+</div>
+
+
+
+
+
+
+  <!-- النشاط -->
+  
+  <!-- فوتر -->
+  <footer>
+            ©  All rights reserved by D. Dawood
+        
+   </footer>
+
+  <script>
+    
+  </script>
+</body>
+</html>
