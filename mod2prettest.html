@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>الاختبار القبلي للموديول الأول </title>
+  <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+     body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* الناف الرئيسي */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #2c3e50;
+      padding: 12px 25px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+    .nav-links a:hover { color: #f1c40f; }
+
+    .left-text {
+      font-weight: bold;
+      font-size: 14px;
+      color: #f1c40f;
+    }
+
+    /* الناف الثانوي */
+    .sub-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #34495e;
+      padding: 10px;
+      gap: 15px;
+    }
+    .sub-nav a {
+      background: #ecf0f1;
+      padding: 8px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.3s;
+    }
+    .sub-nav a:hover {
+      background: #f39c12;
+      color: white;
+      transform: scale(1.05);
+    }
+.pretest-card {
+    width: 80%;
+    margin: 60px auto;
+    padding: 45px 35px;
+    background: linear-gradient(135deg, #ffffff, #f1f6ff);
+    border-radius: 26px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+    border-top: 10px solid #2a5298;
+}
+
+.pretest-title {
+    text-align: center;
+    font-size: 30px;
+    color: #1e3c72;
+    margin-bottom: 10px;
+}
+
+.pretest-desc {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.pre-q {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 18px;
+    margin-bottom: 22px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 18px;
+}
+
+.pre-q p {
+    grid-column: span 2;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pre-q label {
+    background: #eef3fb;
+    padding: 10px 14px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.pre-btn {
+    display: block;
+    margin: 35px auto 0;
+    padding: 15px 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    cursor: pointer;
+}
+
+.pre-result {
+    display: none;
+    margin-top: 35px;
+    padding: 30px;
+    border-radius: 22px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+    /* فوتر ثابت */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    footer:hover { background: #34495e; text-shadow: 0 0 8px #f39c12; }
+  </style>
+</head>
+<body>
+
+  <!-- الناف الرئيسي -->
+  <nav>
+    <div class="nav-links">
+      <a href="index.html">🏠 الصفحة الرئيسية</a>
+      <a href="course.html">📚 المحتوى التعليمي</a>
+      <a href="supervisor.html">🔍 الإعداد والإشراف </a>
+      <a href="instruction.html">📜 التعليمات </a>
+      <a href="contact.html">✉️ التواصل</a>
+    </div>
+    <div class="left-text">نمط الاسئلة الضمنية المصورة المكثفة   </div>
+  </nav>
+<div class="sub-nav">
+    <a href="mod2.html">📘 عنوان الموديول</a>
+    <a href="mod2jus7.html">💡 مبررات دراسة الموديول</a>
+    <a href="mod2aim.html">🎯 أهداف الموديول</a>
+    <a href="#">📝 الاختبار القبلي</a>
+    <a href="mod2content.html">📖 محتوى الموديول</a>
+    <a href="#">🛠️ النشاط التعليمي للموديول</a>
+    <a href="#">✅ التقويم الذاتي للموديول</a>
+    <a href="#">📊 الاختبار البعدي</a>
+  </div>
+
+
+  <!-- النشاط -->
+  <div class="pretest-card">
+    <h2 class="pretest-title">الاختبار القبلي</h2>
+    <p class="pretest-desc">
+        يهدف هذا الاختبار إلى تحديد مدى إلمامك بالمفاهيم الأساسية قبل دراسة الموديول.
+    </p>
+
+    <form id="preTest">
+
+        <div class="pre-q">
+            <p>1️⃣  يُقصد بالكلام أو اللغة المنطوقة في الوسائط المتعددة:</p>
+            <label><input type="radio" name="q1" value="a"> أ) نصوص مكتوبة</label>
+            <label><input type="radio" name="q1" value="b"> ب) مواد منطوقة مسموعة </label>
+            <label><input type="radio" name="q1" value="c"> ج) مؤثرات بصرية </label>
+            <label><input type="radio" name="q1" value="d"> د) رسوم متحركة </label>
+        </div>
+
+        <div class="pre-q">
+            <p>2️⃣ تُستخدم اللغة المنطوقة أساسًا من أجل: </p>
+            <label><input type="radio" name="q2" value="a"> أ) تزيين البرنامج </label>
+            <label><input type="radio" name="q2" value="b"> ب) تقليل حجم الملفات </label>
+            <label><input type="radio" name="q2" value="c"> ج) إعطاء إرشادات وشرح المحتوى </label>
+            <label><input type="radio" name="q2" value="d"> د) تحسين جودة الصورة </label>
+        </div>
+
+        <div class="pre-q">
+            <p>3️⃣ يتم سماع الكلام المنطوق في البرامج من خلال: </p>
+            <label><input type="radio" name="q3" value="a"> أ) لوحة المفاتيح </label>
+            <label><input type="radio" name="q3" value="b"> ب) الشاشة </label>
+            <label><input type="radio" name="q3" value="c">ج) السماعات </label>
+            <label><input type="radio" name="q3" value="d"> د) الفأرة </label>
+        </div>
+
+        <div class="pre-q">
+            <p>4️⃣ المؤثرات الصوتية هي:</p>
+            <label><input type="radio" name="q4" value="a"> أ) أصوات موسيقية فقط </label>
+            <label><input type="radio" name="q4" value="b">ب) أصوات تحاكي الواقع </label>
+            <label><input type="radio" name="q4" value="c">ج) كلمات منطوقة </label>
+            <label><input type="radio" name="q4" value="d">د) ملفات نصية</label>
+        </div>
+
+        <div class="pre-q">
+            <p>5️⃣ من أمثلة المؤثرات الصوتية:</p>
+            <label><input type="radio" name="q5" value="a">أ) التعليق الصوتي</label>
+            <label><input type="radio" name="q5" value="b"> ب) الموسيقى فقط </label>
+            <label><input type="radio" name="q5" value="c">ج) أصوات الرياح والأمطار</label>
+            <label><input type="radio" name="q5" value="d"> د) النص المكتوب</label>
+        </div>
+
+        <button type="button" class="pre-btn" id="showPreResult">
+            إظهار النتيجة
+        </button>
+    </form>
+
+    <div id="preResult" class="pre-result"></div>
+</div>
+
+  <!-- فوتر -->
+  <footer>
+            ©  All rights reserved by D. Dawood
+        
+   </footer>
+
+  <script>
+document.getElementById("showPreResult").addEventListener("click", function () {
+
+    const correct = {
+        q1: "b",
+        q2: "d",
+        q3: "d",
+        q4: "b",
+        q5: "d"
+    };
+
+    let score = 0;
+    let total = Object.keys(correct).length;
+
+    for (let q in correct) {
+        let options = document.getElementsByName(q);
+        let selected = [...options].find(o => o.checked);
+        options.forEach(opt => opt.disabled = true);
+
+        if (selected && selected.value === correct[q]) {
+            score++;
+        }
+    }
+
+    let percentage = (score / total) * 100;
+    let resultBox = document.getElementById("preResult");
+    resultBox.style.display = "block";
+
+    if (percentage >= 85) {
+        resultBox.style.background = "#e9f7ef";
+        resultBox.style.border = "2px solid #28a745";
+        resultBox.innerHTML =
+            `🌟 اجتزت الاختبار بنجاح<br>
+             يمكنك الانتقال إلى دراسة <strong>الموديول الثاني</strong><br>
+             حصلت على نسبة <strong>${percentage.toFixed(0)}%</strong>`;
+    } else if (percentage < 80) {
+        resultBox.style.background = "#fdecea";
+        resultBox.style.border = "2px solid #dc3545";
+        resultBox.innerHTML =
+            `📘 يفضل الانتقال إلى دراسة هذا الموديول أولًا<br>
+             حصلت على نسبة <strong>${percentage.toFixed(0)}%</strong>`;
+    } else {
+        resultBox.style.background = "#fff3cd";
+        resultBox.style.border = "2px solid #ffc107";
+        resultBox.innerHTML =
+            `⚠ مستواك متوسط<br>
+             حصلت على نسبة <strong>${percentage.toFixed(0)}%</strong>`;
+    }
+});
+</script>
+
+</body>
+</html>

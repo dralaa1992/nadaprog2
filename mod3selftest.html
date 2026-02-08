@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>المحتوى التعليمي</title>
+  <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+     body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* الناف الرئيسي */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #2c3e50;
+      padding: 12px 25px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+    .nav-links a:hover { color: #f1c40f; }
+
+    .left-text {
+      font-weight: bold;
+      font-size: 14px;
+      color: #f1c40f;
+    }
+
+    /* الناف الثانوي */
+    .sub-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #34495e;
+      padding: 10px;
+      gap: 15px;
+    }
+    .sub-nav a {
+      background: #ecf0f1;
+      padding: 8px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.3s;
+    }
+    .sub-nav a:hover {
+      background: #f39c12;
+      color: white;
+      transform: scale(1.05);
+    }
+.quiz-card {
+    width: 80%;              /* ياخد عرض الصفحة */
+    max-width: 80%;          /* إلغاء التحديد القديم */
+    margin: 40px auto;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #ffffff, #f2f6fb);
+    border-radius: 22px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+    border-top: 8px solid #2a5298;
+}
+.mcq-question label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 10px 20px 0 0;
+    background: #eef2f7;
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.quiz-title {
+    text-align: center;
+    font-size: 28px;
+    color: #1e3c72;
+    margin-bottom: 10px;
+}
+
+.quiz-desc {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.mcq-question {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.mcq-question label {
+    display: block;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.correct {
+    border: 2px solid #28a745;
+    background: #e9f7ef;
+}
+
+.wrong {
+    border: 2px solid #dc3545;
+    background: #fdecea;
+}
+
+.feedback {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.quiz-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 14px 45px;
+    font-size: 20px;
+    border: none;
+    border-radius: 35px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    cursor: pointer;
+}
+
+.quiz-result {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+    /* فوتر ثابت */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    footer:hover { background: #34495e; text-shadow: 0 0 8px #f39c12; }
+  </style>
+</head>
+<body>
+
+  <!-- الناف الرئيسي -->
+  <nav>
+    <div class="nav-links">
+      <a href="index.html">🏠 الصفحة الرئيسية</a>
+      <a href="course.html">📚 المحتوى التعليمي</a>
+      <a href="supervisor.html">🔍 الإعداد والإشراف </a>
+      <a href="instruction.html">📜 التعليمات </a>
+      <a href="contact.html">✉️ التواصل</a>
+    </div>
+    <div class="left-text">نمط الاسئلة الضمنية المصورة المكثفة   </div>
+  </nav>
+<div class="sub-nav">
+    <a href="mod3.html">📘 عنوان الموديول</a>
+    <a href="mod3jus7.html">💡 مبررات دراسة الموديول</a>
+    <a href="mod3aim.html">🎯 أهداف الموديول</a>
+    <a href="#">📝 الاختبار القبلي</a>
+    <a href="mod3content.html">📖 محتوى الموديول</a>
+    <a href="mod3activity.html">🛠️ النشاط التعليمي للموديول</a>
+    <a href="#">✅ التقويم الذاتي للموديول</a>
+    <a href="mod3posttest.html">📊 الاختبار البعدي</a>
+  </div>
+
+
+  <!-- النشاط -->
+  <div class="quiz-card">
+    <h2 class="quiz-title">اختبار التقويم الذاتي</h2>
+    <p class="quiz-desc">اختر الإجابة الصحيحة لكل سؤال، ثم اضغط على زر إظهار النتيجة.</p>
+
+    <form id="mcqQuiz">
+
+        <div class="mcq-question">
+            <p>1️⃣ يقوم الميكروفون بتحويل:</p>
+            <label><input type="radio" name="q1" value="a"> أ) الموجات الكهربائية إلى ضوئية </label>
+            <label><input type="radio" name="q1" value="b"> ب) الموجات الصوتية إلى كهربائية </label>
+            <label><input type="radio" name="q1" value="c"> ج) البيانات الرقمية إلى صوتية </label>
+            <label><input type="radio" name="q1" value="d"> د) النصوص إلى أصوات </label>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="mcq-question">
+            <p>2️⃣ السماعات وظيفتها الأساسية:</p>
+            <label><input type="radio" name="q2" value="a"> أ) تسجيل الصوت </label>
+            <label><input type="radio" name="q2" value="b">ب) ضغط الملفات الصوتية </label>
+            <label><input type="radio" name="q2" value="c"> ج) تحويل الإشارات الكهربائية إلى صوت مسموع </label>
+            <label><input type="radio" name="q2" value="d"> د) توليد البيانات الرقمية </label>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="mcq-question">
+            <p>3️⃣ وحدة توليد الصوت هي وحدة: </p>
+            <label><input type="radio" name="q3" value="a"> أ) ميكانيكية </label>
+            <label><input type="radio" name="q3" value="b"> ب) إلكترونية </label>
+            <label><input type="radio" name="q3" value="c"> ج) ضوئية </label>
+            <label><input type="radio" name="q3" value="d"> د) كيميائية </label>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="mcq-question">
+            <p>4️⃣ غالبًا ما توجد وحدة توليد الصوت داخل: </p>
+            <label><input type="radio" name="q4" value="a"> أ) المعالج </label>
+            <label><input type="radio" name="q4" value="b"> ب) الشاشة </label>
+            <label><input type="radio" name="q4" value="c"> ج) كارت الصوت </label>
+            <label><input type="radio" name="q4" value="d"> د) لوحة المفاتيح </label>
+            <div class="feedback"></div>
+        </div>
+
+        <div class="mcq-question">
+            <p>5️⃣ كارت الصوت مسؤول عن: </p>
+            <label><input type="radio" name="q5" value="a"> أ) عرض الصور </label>
+            <label><input type="radio" name="q5" value="b"> ب) معالجة النصوص </label>
+            <label><input type="radio" name="q5" value="c"> ج) تحويل الصوت التمثيلي إلى بيانات رقمية </label>
+            <label><input type="radio" name="q5" value="d"> د) تخزين الملفات فقط </label>
+            <div class="feedback"></div>
+        </div>
+
+        <button type="button" class="quiz-btn" id="showScore">إظهار النتيجة</button>
+    </form>
+
+    <div id="quizResult" class="quiz-result"></div>
+</div>
+
+  <!-- فوتر -->
+  <footer>
+            ©  All rights reserved by D. Dawood
+        
+   </footer>
+
+  <script>
+document.getElementById("showScore").addEventListener("click", function () {
+
+    const answers = {
+        q1: "b",
+        q2: "d",
+        q3: "b",
+        q4: "d",
+        q5: "d"
+    };
+
+    let score = 0;
+    let total = Object.keys(answers).length;
+
+    for (let q in answers) {
+        let options = document.getElementsByName(q);
+        let selected = [...options].find(o => o.checked);
+        let box = options[0].closest(".mcq-question");
+        let feedback = box.querySelector(".feedback");
+
+        options.forEach(opt => opt.disabled = true);
+
+        if (selected && selected.value === answers[q]) {
+            score++;
+            box.classList.add("correct");
+            feedback.innerHTML = "✔ إجابة صحيحة";
+            feedback.style.color = "#28a745";
+        } else {
+            box.classList.add("wrong");
+            feedback.innerHTML =
+                `✖ إجابة خاطئة – الإجابة الصحيحة هي: ${answers[q].toUpperCase()}`;
+            feedback.style.color = "#dc3545";
+        }
+    }
+
+    let result = document.getElementById("quizResult");
+    result.style.display = "block";
+
+    if (score >= 4) {
+        result.style.background = "#e9f7ef";
+        result.style.border = "2px solid #28a745";
+        result.innerHTML = `🌟 ممتاز! حصلت على ${score} من ${total} درجات`;
+    } else {
+        result.style.background = "#fdecea";
+        result.style.border = "2px solid #dc3545";
+        result.innerHTML = `💡 حاول مرة أخرى، حصلت على ${score} من ${total} درجات`;
+    }
+});
+</script>
+
+</body>
+</html>

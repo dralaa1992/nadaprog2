@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>الاختبار البعدي</title>
+<style>
+body {
+    font-family: "Cairo", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f4f8;
+    color: #2c3e50;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* الناف الرئيسي */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    padding: 12px 25px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.nav-links a:hover { color: #f1c40f; }
+.left-text { font-weight: bold; font-size: 14px; color: #f1c40f; }
+
+/* الناف الثانوي */
+.sub-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #34495e;
+    padding: 10px;
+    gap: 15px;
+    width: 100%;
+}
+.sub-nav a {
+    background: #ecf0f1;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.3s;
+}
+.sub-nav a:hover {
+    background: #f39c12;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* كارت الاختبار */
+.posttest-card {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px 40px;
+    background: linear-gradient(145deg, #f0f4ff, #d9e4ff);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2), 0 0 15px rgba(0,123,255,0.4) inset;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.posttest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25), 0 0 25px rgba(0,123,255,0.6) inset;
+}
+
+/* عنوان الاختبار */
+.posttest-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #0d3b66;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+/* وصف الاختبار */
+.posttest-desc {
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1d4e89;
+}
+
+/* كل سؤال */
+.post-q {
+    background: #ffffff;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.post-q:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* نص السؤال */
+.post-q p {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* خيارات بجانب بعضهم */
+.options-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.options-row label {
+    flex: 1 1 calc(50% - 10px);
+    background: #f7f9ff;
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.options-row label:hover {
+    background: #e3ebff;
+    border-color: #0d3b66;
+}
+
+/* خيارات عمودية */
+.post-q label {
+    display: block;
+    margin-bottom: 10px;
+    background: #f7f9ff;
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.post-q label:hover {
+    background: #e3ebff;
+    border-color: #0d3b66;
+}
+
+/* feedback */
+.feedback {
+    margin-top: 12px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* إجابة صحيحة */
+.correct .feedback {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #28a745;
+    text-shadow: 0 0 2px #28a745;
+}
+
+/* إجابة خاطئة */
+.wrong .feedback {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #dc3545;
+    text-shadow: 0 0 2px #dc3545;
+}
+
+/* زر إظهار النتيجة */
+.post-btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #0d3b66, #1d4e89);
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    transition: all 0.3s;
+}
+
+.post-btn:hover {
+    background: linear-gradient(135deg, #1d4e89, #0d3b66);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+}
+
+/* صندوق النتيجة */
+.post-result {
+    display: none;
+    margin-top: 25px;
+    padding: 20px 25px;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    animation: glow 1.5s infinite alternate;
+}
+
+/* تأثير توهج للصندوق */
+@keyframes glow {
+    0% { box-shadow: 0 0 15px rgba(0,123,255,0.5); }
+    50% { box-shadow: 0 0 25px rgba(0,123,255,0.8); }
+    100% { box-shadow: 0 0 15px rgba(0,123,255,0.5); }
+}
+
+
+/* فوتر */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+}
+</style>
+</head>
+<body>
+
+<!-- الناف الرئيسي -->
+<nav>
+    <div class="nav-links">
+      <a href="index.html">🏠 الصفحة الرئيسية</a>
+      <a href="course.html">📚 المحتوى التعليمي</a>
+      <a href="supervisor.html">🔍 الإعداد والإشراف </a>
+      <a href="instruction.html">📜 التعليمات </a>
+      <a href="contact.html">✉️ التواصل</a>
+    </div>
+    <div class="left-text">نمط الاسئلة الضمنية المصورة المكثفة   </div>
+  </nav>
+
+<!-- الناف الثانوي -->
+<div class="sub-nav">
+  <a href="mod4.html">📘 عنوان الموديول</a>
+  <a href="mod4jus7.html">💡 مبررات دراسة الموديول</a>
+  <a href="mod4aim.html">🎯 أهداف الموديول</a>
+  <a href="#">📝 الاختبار القبلي</a>
+  <a href="mod4content.html">📖 محتوى الموديول</a>
+  <a href="mod4activity.html">🛠️ النشاط التعليمي للموديول</a>
+  <a href="mod4selftest.html">✅ التقويم الذاتي للموديول</a>
+  <a href="#">📊 الاختبار البعدي</a>
+</div>
+
+<!-- كارت الاختبار البعدي -->
+<!-- كارت الاختبار البعدي -->
+<div class="posttest-card">
+  <h2 class="posttest-title">الاختبار البعدي</h2>
+  <p class="posttest-desc">يهدف هذا الاختبار إلى تحديد مدى إتقانك للمفاهيم الأساسية بعد دراسة الموديول.</p>
+
+  <form id="postTest">
+    <!-- السؤال الأول: خيارات بجانب بعضهم -->
+    <div class="post-q">
+      <p>1️⃣ برنامج Audiolab هو برنامج يُستخدم أساسًا في: </p>
+      <div class="options-row">
+            <label><input type="radio" name="q1" value="a"> أ) تصميم الصور </label>
+            <label><input type="radio" name="q1" value="b"> ب) تحرير ومعالجة الصوت </label>
+            <label><input type="radio" name="q1" value="c"> ج) برمجة التطبيقات </label>
+            <label><input type="radio" name="q1" value="d"> د) إنشاء العروض التقديمية </label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+    <!-- السؤال الثاني -->
+    <div class="post-q">
+      <p>2️⃣ من استخدامات برنامج Audiolab: </p>
+            <label><input type="radio" name="q2" value="a"> أ) تسجيل الملاحظات الصوتية </label>
+            <label><input type="radio" name="q2" value="b"> ب) تصميم مواقع الإنترنت </label>
+            <label><input type="radio" name="q2" value="c"> ج) معالجة النصوص </label>
+            <label><input type="radio" name="q2" value="d"> د) تحليل البيانات </label>
+      <div class="feedback"></div>
+    </div>
+
+    <!-- السؤال الثالث -->
+    <div class="post-q">
+      <p>3️⃣ يتم تسجيل الصوت في برنامج Audiolab من خلال: </p>
+            <label><input type="radio" name="q3" value="a"> أ) أداة الدمج </label>
+            <label><input type="radio" name="q3" value="b"> ب) أداة التحويل </label>
+            <label><input type="radio" name="q3" value="c"> ج) أداة التسجيل الصوتي </label>
+            <label><input type="radio" name="q3" value="d"> د) أداة التقسيم </label>
+      <div class="feedback"></div>
+    </div>
+
+    <!-- السؤال الرابع -->
+    <div class="post-q">
+      <p>4️⃣ دمج المقاطع الصوتية في Audiolab يعني: </p>
+            <label><input type="radio" name="q4" value="a"> أ) حذف الصوت </label>
+            <label><input type="radio" name="q4" value="b"> ب) تغيير نبرة الصوت </label>
+            <label><input type="radio" name="q4" value="c"> ج) جمع عدة مقاطع في ملف واحد </label>
+            <label><input type="radio" name="q4" value="d"> د) عكس اتجاه الصوت </label>
+      <div class="feedback"></div>
+    </div>
+
+    <!-- السؤال الخامس -->
+    <div class="post-q">
+      <p>5️⃣ تُستخدم أداة Reverse Audio من أجل:</p>
+            <label><input type="radio" name="q5" value="a"> أ) تقسيم الملف الصوتي </label>
+            <label><input type="radio" name="q5" value="b">ب) تغيير صيغة الصوت </label>
+            <label><input type="radio" name="q5" value="c"> ج) عكس اتجاه سماع الصوت </label>
+            <label><input type="radio" name="q5" value="d"> د) إزالة الضوضاء </label>
+      <div class="feedback"></div>
+    </div>
+
+    <button type="button" id="showPostResult" class="post-btn">إظهار النتيجة</button>
+  </form>
+
+  <div id="postResult" class="post-result"></div>
+</div>
+
+<script>
+document.getElementById("showPostResult").addEventListener("click", function() {
+    const correct = { q1:"b", q2:"a", q3:"b", q4:"d", q5:"d" };
+    let score = 0;
+    let total = Object.keys(correct).length;
+
+    for (let q in correct) {
+        let options = document.getElementsByName(q);
+        if (!options || options.length === 0) continue;
+
+        let selected = Array.from(options).find(o => o.checked);
+        let questionDiv = options[0].closest(".post-q");
+
+        // تعطيل كل الاختيارات
+        options.forEach(o => o.disabled = true);
+
+        // إنشاء feedback إذا لم يكن موجود
+        let feedback = questionDiv.querySelector(".feedback");
+        if (!feedback) {
+            feedback = document.createElement("div");
+            feedback.classList.add("feedback");
+            questionDiv.appendChild(feedback);
+        }
+
+        // مسح أي كلاسات قديمة
+        questionDiv.classList.remove("correct", "wrong");
+
+        if (selected) {
+            if (selected.value === correct[q]) {
+                score++;
+                questionDiv.classList.add("correct");
+                feedback.innerHTML = "✔ إجابة صحيحة";
+                feedback.style.color = "#28a745";
+            } else {
+                questionDiv.classList.add("wrong");
+                feedback.innerHTML = "✖ إجابة خاطئة — يرجى إعادة دراسة الموديول";
+                feedback.style.color = "#dc3545";
+            }
+        } else {
+            // لم يتم اختيار أي إجابة
+            questionDiv.classList.add("wrong");
+            feedback.innerHTML = "⚠ لم تختَر أي إجابة — يرجى إعادة دراسة الموديول";
+            feedback.style.color = "#ffc107";
+        }
+    }
+
+    // النتيجة النهائية
+    let percentage = (score / total) * 100;
+    let resultBox = document.getElementById("postResult");
+    resultBox.style.display = "block";
+
+    if (percentage >= 85) {
+        resultBox.style.background = "#e9f7ef";
+        resultBox.style.border = "2px solid #28a745";
+        resultBox.innerHTML = `🌟 اجتزت الاختبار البعدي بنجاح!<br>يمكنك الانتقال إلى دراسة <strong>الموديول الثاني</strong><br>حصلت على نسبة <strong>${percentage.toFixed(0)}%</strong>%`;
+    } else {
+        resultBox.style.background = "#fdecea";
+        resultBox.style.border = "2px solid #dc3545";
+        resultBox.innerHTML = `📌 لم تحقق الحد المطلوب.<br>قم بإعادة دراسة الموديول مرة ثانية<br>حصلت على نسبة <strong>${percentage.toFixed(0)}%</strong>%`;
+    }
+});
+</script>
+</body>
+</html>

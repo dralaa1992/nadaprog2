@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>المحتوى التعليمي</title>
+  <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+     body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* الناف الرئيسي */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #2c3e50;
+      padding: 12px 25px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+    .nav-links a:hover { color: #f1c40f; }
+
+    .left-text {
+      font-weight: bold;
+      font-size: 14px;
+      color: #f1c40f;
+    }
+
+    /* الناف الثانوي */
+    .sub-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #34495e;
+      padding: 10px;
+      gap: 15px;
+    }
+    .sub-nav a {
+      background: #ecf0f1;
+      padding: 8px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.3s;
+    }
+    .sub-nav a:hover {
+      background: #f39c12;
+      color: white;
+      transform: scale(1.05);
+    }
+.center-wrapper {
+    display: flex;
+    justify-content: center;   /* أفقي */
+    margin: 100px 0;            /* مسافة من فوق وتحت */
+}
+
+/* الكارت */
+.concept-card {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    border-radius: 18px;
+    padding: 30px 25px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    max-width: 900px;
+    width: 100%;
+}
+
+/* العنوان */
+.concept-card h3 {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* الأيقونة */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    color: #1e3c72;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin: 0 auto 15px;
+}
+
+
+    /* فوتر ثابت */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    footer:hover { background: #34495e; text-shadow: 0 0 8px #f39c12; }
+    .module-image {
+    width: 100%;
+    max-width: 720px;
+    margin: 15px auto 0;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,123,255,0.5);
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- الناف الرئيسي -->
+  <nav>
+    <div class="nav-links">
+      <a href="index.html">🏠 الصفحة الرئيسية</a>
+      <a href="course.html">📚 المحتوى التعليمي</a>
+      <a href="supervisor.html">🔍 الإعداد والإشراف </a>
+      <a href="instruction.html">📜 التعليمات </a>
+      <a href="contact.html">✉️ التواصل</a>
+    </div>
+    <div class="left-text">نمط الاسئلة الضمنية المصورة المكثفة   </div>
+  </nav>
+<div class="sub-nav">
+    <a href="mod2.html">📘 عنوان الموديول</a>
+    <a href="mod2jus7.html">💡 مبررات دراسة الموديول</a>
+    <a href="mod2aim.html">🎯 أهداف الموديول</a>
+    <a href="#">📝 الاختبار القبلي</a>
+    <a href="#">📖 محتوى الموديول</a>
+    <a href="#">🛠️ النشاط التعليمي للموديول</a>
+    <a href="#">✅ التقويم الذاتي للموديول</a>
+    <a href="#">📊 الاختبار البعدي</a>
+  </div>
+
+<section class="center-wrapper">
+    <div class="concept-card">
+        <div class="icon-circle">🎧</div>
+
+        <h3>
+            الموديول الثاني <br>
+         التعريف بالمفاهيم المرتبطة بالصوت الرقمى  </h3>
+
+        <!-- صورة الموديول -->
+        <img src="img/mod2.png" alt="مصادر التعلم السمعية" class="module-image">
+    </div>
+</section>
+
+
+
+  <!-- النشاط -->
+  
+  <!-- فوتر -->
+  <footer>
+            ©  All rights reserved by D. Dawood
+        
+   </footer>
+
+  <script>
+    
+  </script>
+</body>
+</html>

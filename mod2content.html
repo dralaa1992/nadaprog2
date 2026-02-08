@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>المحتوى التعليمي</title>
+  <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+     body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* الناف الرئيسي */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #2c3e50;
+      padding: 12px 25px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+    .nav-links a:hover { color: #f1c40f; }
+
+    .left-text {
+      font-weight: bold;
+      font-size: 14px;
+      color: #f1c40f;
+    }
+
+    /* الناف الثانوي */
+    .sub-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #34495e;
+      padding: 10px;
+      gap: 15px;
+    }
+    .sub-nav a {
+      background: #ecf0f1;
+      padding: 8px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.3s;
+    }
+    .sub-nav a:hover {
+      background: #f39c12;
+      color: white;
+      transform: scale(1.05);
+    }
+.video-section {
+    max-width: 800px;
+    margin: 2px auto;
+    text-align: center;
+}
+
+/* العنوان */
+.video-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1e3c72;
+    margin-bottom: 2px;
+}
+
+/* الفيديو */
+.video-frame {
+    position: relative;
+    padding-top: 80.25%;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+    margin-bottom: 0px;
+}
+
+.video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* الكارت المتوهج */
+.glow-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px 25px;
+    border: 2px solid #2a5298;
+    box-shadow:
+        0 0 12px rgba(42, 82, 152, 0.4),
+        0 0 25px rgba(42, 82, 152, 0.25);
+    text-align: right;
+}
+
+.glow-card h4 {
+    font-size: 20px;
+    color: #1e3c72;
+    margin-bottom: 10px;
+}
+
+.glow-card p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #333;
+}
+
+
+    /* فوتر ثابت */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    footer:hover { background: #34495e; text-shadow: 0 0 8px #f39c12; }
+  </style>
+</head>
+<body>
+
+  <!-- الناف الرئيسي -->
+  <nav>
+    <div class="nav-links">
+      <a href="index.html">🏠 الصفحة الرئيسية</a>
+      <a href="course.html">📚 المحتوى التعليمي</a>
+      <a href="supervisor.html">🔍 الإعداد والإشراف </a>
+      <a href="instruction.html">📜 التعليمات </a>
+      <a href="contact.html">✉️ التواصل</a>
+    </div>
+    <div class="left-text">نمط الاسئلة الضمنية المصورة المكثفة   </div>
+  </nav>
+<div class="sub-nav">
+    <a href="mod2.html">📘 عنوان الموديول</a>
+    <a href="mod2jus7.html">💡 مبررات دراسة الموديول</a>
+    <a href="mod2aim.html">🎯 أهداف الموديول</a>
+    <a href="#">📝 الاختبار القبلي</a>
+    <a href="#">📖 محتوى الموديول</a>
+    <a href="mod2activity.html">🛠️ النشاط التعليمي للموديول</a>
+    <a href="#">✅ التقويم الذاتي للموديول</a>
+    <a href="#">📊 الاختبار البعدي</a>
+  </div>
+
+<div class="video-section">
+
+    <!-- العنوان -->
+    <h2 class="video-title">
+        فيديو الموديول الثاني: المفاهيم المرتبطة بالصوت الرقمي
+    </h2>
+    <hr>
+    <!-- الفيديو -->
+    <div class="video-frame">
+        <iframe width="768" height="597" scrolling="no" src="https://www.wevideo.com/api/5/bulbs/collaboration/cf34ea7f-623c-4d73-b86b-d5cecbcf15ce/preview" allow="autoplay *;" allowfullscreen frameborder="0"></iframe>
+    </div>
+</div>
+
+
+  <!-- النشاط -->
+  
+  <!-- فوتر -->
+  <footer>
+            ©  All rights reserved by D. Dawood
+        
+   </footer>
+
+  <script>
+    
+  </script>
+</body>
+</html>
